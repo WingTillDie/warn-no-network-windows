@@ -13,7 +13,6 @@ Run the program in WSL:
 ./warn-no-network.sh
 ```
 
-
 ## How to use
 When there's no network connection, a Windows notification and a xmessage window will pop up
 After network is resumes, click the X on popped up xmessage window to continue the program

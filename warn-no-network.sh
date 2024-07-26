@@ -8,10 +8,10 @@ while true; do
 		xmessage No network
 	elif [ $result -eq 0 ]; then
 		echo "Has network"
+		sleep 1m
 	else
 		echo -n "Unknown return code"
 		echo " $result"
 		xmessage Unknown return code $?
 	fi
-	sleep 1m
 done
