@@ -1,6 +1,27 @@
 # warn-no-network-windows
 Warn when there's no network connection in Windows
 
+```mermaid
+flowchart TD
+    Forever{{Forever}}
+    ping[Get Connectivity Status]
+    Forever --> ping
+    ping --> If
+    If{Is Connected?}
+    Connected[/Print Has Network/]
+    Sleep[Sleep 1 Minute]
+    Connected --> Sleep
+    Disconnected[/Print No network/]
+    Pause[\Pause/]
+    Disconnected --> Pause
+    If -->|Yes| Connected
+    If --> |No| Disconnected
+    Sleep --> join
+    Pause --> join
+    join(( ))
+    join --> Forever
+```
+
 ## How to install the dependencies of the program
 In Powershell, run following command to install the dependency BurntToast:
 ```powershell
